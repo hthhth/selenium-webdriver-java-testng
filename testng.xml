@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Selenium WebDriver API" parallel="tests" thread-count="3">
+    <parameter name="username" value="auto_test_05@gmail.com"/>
+    <parameter name="password" value="123123"/>
+    <test name="Run on CHROME browser">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="testng.TestNG_04_MultiBrowser"/>
+        </classes>
+    </test>
+    <test name="Run on FIREFOX browser">
+        <parameter name="browser" value="firefox"/>
+        <classes>
+            <class name="testng.TestNG_04_MultiBrowser"/>
+        </classes>
+    </test>
+    <test name="Run on CHROME HEADLESS browser">
+        <parameter name="browser" value="headless"/>
+        <classes>
+            <class name="testng.TestNG_04_MultiBrowser"/>
+        </classes>
+    </test>
+</suite>
